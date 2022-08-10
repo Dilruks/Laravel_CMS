@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,21 @@ Route::prefix('admin')->group(function(){
    Route::get('edit-category/{category_id}',[App\Http\Controllers\Admin\CategoryController::class,'edit']);
    Route::put('update-category/{category_id}',[App\Http\Controllers\Admin\CategoryController::class,'update']);
    Route::get('delete-category/{category_id}',[App\Http\Controllers\Admin\CategoryController::class,'destroy']);
+
+
+   Route::get('image',[App\Http\Controllers\Admin\ImageController::class,'index']);
+   Route::get('add-image',[App\Http\Controllers\Admin\ImageController::class,'create']);
+   Route::post('add-image',[App\Http\Controllers\Admin\ImageController::class,'store']);
+   Route::get('edit-image/{image_id}',[App\Http\Controllers\Admin\ImageController::class,'edit']);
+   Route::put('update-image/{image_id}',[App\Http\Controllers\Admin\ImageController::class,'update']);
+   Route::get('delete-image/{image_id}',[App\Http\Controllers\Admin\ImageController::class,'destroy']);
+
+   Route::get('page',[App\Http\Controllers\Admin\PageController::class,'index']);
+   Route::get('add-page',[App\Http\Controllers\Admin\PageController::class,'create']);
+   Route::post('add-page',[App\Http\Controllers\Admin\PageController::class,'store']);
+   Route::get('page/{page_id}',[App\Http\Controllers\Admin\PageController::class,'edit']);
+   Route::put('update-page/{page_id}',[App\Http\Controllers\Admin\PageController::class,'update']);
+   Route::get('update-page/{page_id}',[App\Http\Controllers\Admin\PageController::class,'destroy']);
+
+
 });

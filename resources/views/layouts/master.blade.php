@@ -397,18 +397,39 @@
           <li class="back-btn">
             <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
           </li>
-          <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="../theme/index.html" target="_blank"><i data-feather="home"></i><span>Dashboard</span></a></li>
+          <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="{{url('admin/dashboard')}}"><i data-feather="home"></i><span>Dashboard</span></a></li>
           <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="anchor"></i><span>Category</span></a>
             <ul class="sidebar-submenu">
               <li><a class="submenu-title" href="{{url('admin/category')}}">View Category<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
               </li>
-              <li>     <a class="submenu-title" href="{{url('admin/add-category')}}">AddCategory<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+              <li>     <a class="submenu-title" href="{{url('admin/add-category')}}">Add Category<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                <ul class="nav-sub-childmenu submenu-content">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="anchor"></i><span>Image</span></a>
+            <ul class="sidebar-submenu">
+              <li><a class="submenu-title" href="{{url('admin/image')}}">View Image<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+              </li>
+              <li>     <a class="submenu-title" href="{{url('admin/add-image')}}">Add Image<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                <ul class="nav-sub-childmenu submenu-content">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="anchor"></i><span>Page</span></a>
+            <ul class="sidebar-submenu">
+              <li><a class="submenu-title" href="{{url('admin/page')}}">View Page<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+              </li>
+              <li>     <a class="submenu-title" href="{{url('admin/add-page')}}">Add Page<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
                 <ul class="nav-sub-childmenu submenu-content">
                 </ul>
               </li>
             </ul>
           </li>
           <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
+          
           <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/all_in_one/document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation                                    </span></a></li>
         </ul>
       </div>

@@ -67,7 +67,7 @@
 
             <div class="mb-3">
                 <label for="">Sort</label>
-                <input type="number" name="sort" value="{{$category->sort}}" class="form-control">
+                <input type="number" name="sort" value="{{$category->sort}}">
             </div>
             
             <div class="col-md-6">
