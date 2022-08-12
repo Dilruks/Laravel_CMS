@@ -28,7 +28,7 @@
 
             <div class="mb-3">
                 <label for="">Body</label>
-                <textarea name="body" id=""  rows="3" class="form-control" >{{$category->body}} </textarea>
+                <textarea name="body"  class="ckeditor form-control" >{{$category->body}} </textarea>
             </div>
 
             <div class="mb-3">

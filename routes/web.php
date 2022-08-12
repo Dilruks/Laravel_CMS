@@ -49,5 +49,12 @@ Route::prefix('admin')->group(function(){
    Route::put('update-page/{page_id}',[App\Http\Controllers\Admin\PageController::class,'update']);
    Route::get('update-page/{page_id}',[App\Http\Controllers\Admin\PageController::class,'destroy']);
 
+   Route::get('widget',[App\Http\Controllers\Admin\WidgetController::class,'index']);
+   Route::get('add-widget',[App\Http\Controllers\Admin\WidgetController::class,'create']);
+   Route::post('add-widget',[App\Http\Controllers\Admin\WidgetController::class,'store']);
+   Route::get('widget/{widget_id}',[App\Http\Controllers\Admin\WidgetController::class,'edit']);
+   Route::put('update-widget/{widget_id}',[App\Http\Controllers\Admin\WidgetController::class,'update']);
+   Route::get('update-widget/{widget_id}',[App\Http\Controllers\Admin\WidgetController::class,'destroy']);
+
 
 });

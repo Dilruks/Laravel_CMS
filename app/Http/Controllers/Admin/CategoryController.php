@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryFormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -18,7 +19,8 @@ class CategoryController extends Controller
     public function create()
 
     {
-        return view('admin.category.create');
+        $category = Category::where('status',0)->get();
+        return view('admin.category.create',compact('category'));
     }
 
     public function store(CategoryFormRequest $request)
@@ -29,7 +31,7 @@ class CategoryController extends Controller
         $category = new Category;
         $category->name =$data['name'];
         $category->body =$data['body'];
-        $category->slug =$data['slug'];
+        $category->slug = Str::slug($data['slug']);
         $category->parent =$data['parent'];
         $category->image_id =$data['image_id'];
         $category->status = $request->status == true ? '1':'0';
@@ -53,7 +55,7 @@ class CategoryController extends Controller
         $category =Category::find($category_id);
         $category->name =$data['name'];
         $category->body =$data['body'];
-        $category->slug =$data['slug'];
+        $category->slug =Str::slug($data['slug']);
         $category->parent =$data['parent'];
         $category->image_id =$data['image_id'];
         $category->status = $request->status == true ? '1':'0';

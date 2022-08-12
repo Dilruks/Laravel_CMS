@@ -17,7 +17,7 @@
     </div>
     @endif
 
-    <form action="{{url('admin/add-image')}}" method="POST">
+    <form action="{{url('admin/add-image')}}" method="POST" >
      @csrf
         <div class="mb-3">
             <label for="">Image Name</label>
@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
             <label for="">Ext</label>
-            <textarea name="ext" rows="1" class="form-control"></textarea>
+          <input type="text" name="ext" class="form-control">
         </div>
         <div class="mb-3">
             <label for="">Archive</label>

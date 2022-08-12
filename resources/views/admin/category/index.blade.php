@@ -21,8 +21,8 @@
           <th scope="col">Status</th>
           <th scope="col">Archive</th>
           <th scope="col">Sort</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Delete</th>
+          <th scope="col">Action</th>
+    
         </tr>
       </thead>
       <tbody>
@@ -40,8 +40,7 @@
           <td>{{$item->sort}}</td>
           <td>
             <a href="{{url('admin/edit-category/'.$item->id)}}" class="btn btn-success">Edit</a>
-          </td>
-          <td>
+         
             <a href="{{url('admin/delete-category/'.$item->id)}}" class="btn btn-danger">Delete</a>
           </td>
         </tr>

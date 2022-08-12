@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Widget;
 use App\Http\Requests\Admin\PageFormRequest;
 use App\Models\Page;
 use Illuminate\Http\Request;

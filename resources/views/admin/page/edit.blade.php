@@ -28,7 +28,7 @@
         </div>
         <div class="mb-3">
             <label for="">Description</label>
-            <textarea name="description" class="form-control">{!!$page->description!!}</textarea>
+            <textarea name="description" class="ckeditor form-control">{!!$page->description!!}</textarea>
         </div>
         <div class="mb-3">
             <label for="">Slug</label>

@@ -33,6 +33,9 @@
     <link id="color" rel="stylesheet" href="{{asset('css/color-1.css" media="screen')}}">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
   </head>
   <body>
     <!-- loader starts-->
@@ -428,6 +431,16 @@
               </li>
             </ul>
           </li>
+          <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="anchor"></i><span>Widget</span></a>
+            <ul class="sidebar-submenu">
+              <li><a class="submenu-title" href="{{url('admin/widget')}}">View Widget<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+              </li>
+              <li>     <a class="submenu-title" href="{{url('admin/add-widget')}}">Add Widget<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                <ul class="nav-sub-childmenu submenu-content">
+                </ul>
+              </li>
+            </ul>
+          </li>
           <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
           
           <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/all_in_one/document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation                                    </span></a></li>
@@ -526,5 +539,11 @@
       <script src="{{asset('js/theme-customizer/customizer.js')}}"></script>
       <!-- login js-->
       <!-- Plugin used-->
+      <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+       <script type="text/javascript">
+       $(document).ready(function() {
+       $('.ckeditor').ckeditor();
+        });
+</script>
     </body>
   </html>

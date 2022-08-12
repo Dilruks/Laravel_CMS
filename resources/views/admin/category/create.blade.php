@@ -27,7 +27,7 @@
 
             <div class="mb-3">
                 <label for="">Body</label>
-                <textarea name="body" id=""  rows="3" class="form-control"></textarea>
+                <textarea class="ckeditor form-control" name="body"></textarea>
             </div>
 
             <div class="mb-3">
@@ -37,7 +37,12 @@
 
             <div class="mb-3">
                 <label for="">Parent</label>
-                <input type="text" name="parent" class="form-control">
+                <select name="slug" class="form-control">
+                    <option value="">--Select Category Name--</option>
+                    @foreach ($category as $cateitem)
+                  <option value="{{$cateitem->id}}" >{{$cateitem->name}}</option>
+                  @endforeach
+                </select>
             </div>
 
             <div class="mb-3">

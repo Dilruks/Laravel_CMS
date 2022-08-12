@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-   <h4>Add Page <a href="{{url('admin/add-page')}}" class="btn btn-primary btn-sm float-end">Add page</a></h4>
+   <h4>Add Widget <a href="{{url('admin/add-widget')}}" class="btn btn-primary btn-sm float-end">Add Widget</a></h4>
     @if (session('message'))
     <div class="alert alert-success">{{session('message')}}</div>
     @endif
@@ -17,10 +17,10 @@
 @endif
 
   <div class="card-body">
-    <form action="{{url('admin/add-page')}}" method="POST">
+    <form action="{{url('admin/add-widget')}}" method="POST">
          @csrf
         <div class="mb-3">
-            <label for="">Page Name</label>
+            <label for=""> Name</label>
             <input type="text" name="name" class="form-control">
         </div>
         <div class="mb-3">
@@ -34,6 +34,15 @@
               <option value="{{$cateitem->id}}" >{{$cateitem->slug}}</option>
               @endforeach
             </select>
+        </div>
+        <div class="mb-3">
+            <label for="">Type</label>
+            <input name="type" class="form-control">
+
+        </div>
+        <div class="mb-3">
+            <label for="">Image_id</label>
+            <input type="number" name="image_id" class="form-control">
         </div>
         
         <div class="col-md-3 mb-3">
@@ -51,7 +60,7 @@
         <div class="row">
        <div class="col-md-8">
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary float-end">Save Page</button>
+            <button type="submit" class="btn btn-primary float-end">Save Widget</button>
         </div>
     </div>
 
